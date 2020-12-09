@@ -11,25 +11,37 @@ def connect():
     except:
         connect()
     return mydb
-def seller_registration(name: str, email: str, address: str, passwd: str, phno: str):
+def seller_registration1(fname: str,lname: str, email: str, address: str, passwd: str, phno: str):#seller registration f
     mydb = connect()
     mycursor = mydb.cursor()
     hassedPasswd = bcrypt.hashpw(passwd.encode("utf-8"), bcrypt.gensalt())
     try:
-        insertFn = "INSERT INTO seller_info (name,email,pass,address,phno) VALUES (%s, %s, %s, %s,%s)"
-        registration_info = (name, email, hassedPasswd, address, phno)
+        insertFn = "INSERT INTO seller_info (fname,lname,email,pass,address,phno) VALUES (%s, %s, %s, %s, %s,%s)"
+        registration_info = (fname, lname, email, hassedPasswd, address, phno)
         mycursor.execute(insertFn, registration_info)
         mydb.commit()
         return 1
     except:
         return 0  # email exists
-def buyer_registration(name: str, email: str, address: str, passwd: str, phno: str):
+
+def seller_registration2(sname: str,stype:str, saddress: str):#seller's shop info register
+    mydb = connect()
+    mycursor = mydb.cursor()
+    try:
+        insertFn = "INSERT INTO seller_info (sname,stype,saddress) VALUES (%s, %s, %s)"
+        registration_info = (sname,stype,saddress)
+        mycursor.execute(insertFn, registration_info)
+        mydb.commit()
+        return 1
+    except:
+        return 0  # email exis
+def buyer_registration(fname: str,lname: str, email: str, address: str, passwd: str, phno: str):
     mydb = connect()
     mycursor = mydb.cursor()
     hassedPasswd = bcrypt.hashpw(passwd.encode("utf-8"), bcrypt.gensalt())
     try:
-        insertFn = "INSERT INTO buyer_info (name,email,pass,address,phno) VALUES (%s, %s, %s, %s,%s)"
-        registration_info = (name, email, hassedPasswd, address, phno)
+        insertFn = "INSERT INTO buyer_info (fname,lname,email,pass,address,phno) VALUES (%s, %s, %s, %s, %s,%s)"
+        registration_info = (fname,lname, email, hassedPasswd, address, phno)
         mycursor.execute(insertFn, registration_info)
         mydb.commit()
         return 1
