@@ -2,16 +2,17 @@
 <html lang="eng">
 
 <head>
-    <link rel="stylesheet" href="./css/signupstyle.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/signupstyle.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <title>Shop</title>
 </head>
 
 <body>
     <div class="container">
         <!-- Nav -->
         <nav class="main-nav">
-            <a href="index.php">
-                <img src="images/logo.png" alt="Easyshop" class="logo"></a>
+            <a href="{{url_for('index')}}">
+                <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyshop" class="logo"></a>
 
 
 
@@ -42,7 +43,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="cart.php">
+                    <a href="{{url_for('cart')}}">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </a>
                 </li>
@@ -54,13 +55,13 @@
         <!-- Home cards 1 -->
 
         <div class="shop-top">
-            <img src="images/shop.jpg" alt="Shop-image" style="width:100%;height:290px; margin-bottom:5px">
+            <img src="{{url_for('static',filename='images/shop.jpg')}}" alt="Shop-image" style="width:100%;height:290px; margin-bottom:5px">
             <h1 style="text-align:center;color: #b80019;">Annat Gift Shop</h1>
             <p style="text-align:center;color:grey; margin-bottom:60px">Bypass Road,Gaya,Bihar</p>
         </div>
         <section class="home-cards">
             <div>
-                <img src="images/good_day.jpg" alt="">
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
                 <p style="color:grey; margin-bottom:0px">Britainia</p>
                 <h3>Good Day 100g</h3>
                 <p>MRP: 10</p>
@@ -71,7 +72,7 @@
                 </form>
             </div>
             <div>
-                <img src="images/good_day.jpg" alt="">
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
                 <p style="color:grey; margin-bottom:0px">Britainia</p>
                 <h3>Good Day 100g</h3>
                 <p>MRP: 10</p>
@@ -82,7 +83,7 @@
                 </form>
             </div>
             <div>
-                <img src="images/good_day.jpg" alt="">
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
                 <p style="color:grey; margin-bottom:0px">Britainia</p>
                 <h3>Good Day 100g</h3>
                 <p>MRP: 10</p>
@@ -93,53 +94,7 @@
                 </form>
             </div>
             <div>
-                <img src="images/good_day.jpg" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-        </section>
-        <section class="home-cards">
-            <div>
-                <img src="images/good_day.jpg" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="images/good_day.jpg" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="images/good_day.jpg" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="images/good_day.jpg" alt="">
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
                 <p style="color:grey; margin-bottom:0px">Britainia</p>
                 <h3>Good Day 100g</h3>
                 <p>MRP: 10</p>
@@ -152,7 +107,7 @@
         </section>
         <section class="home-cards">
             <div>
-                <img src="images/good_day.jpg" alt="">
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
                 <p style="color:grey; margin-bottom:0px">Britainia</p>
                 <h3>Good Day 100g</h3>
                 <p>MRP: 10</p>
@@ -163,7 +118,7 @@
                 </form>
             </div>
             <div>
-                <img src="images/good_day.jpg" alt="">
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
                 <p style="color:grey; margin-bottom:0px">Britainia</p>
                 <h3>Good Day 100g</h3>
                 <p>MRP: 10</p>
@@ -174,7 +129,7 @@
                 </form>
             </div>
             <div>
-                <img src="images/good_day.jpg" alt="">
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
                 <p style="color:grey; margin-bottom:0px">Britainia</p>
                 <h3>Good Day 100g</h3>
                 <p>MRP: 10</p>
@@ -185,7 +140,53 @@
                 </form>
             </div>
             <div>
-                <img src="images/good_day.jpg" alt="">
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
+                <p style="color:grey; margin-bottom:0px">Britainia</p>
+                <h3>Good Day 100g</h3>
+                <p>MRP: 10</p>
+                <form method="get">
+                    <label for="quantity">Qty: </label>
+                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
+                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
+                </form>
+            </div>
+        </section>
+        <section class="home-cards">
+            <div>
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
+                <p style="color:grey; margin-bottom:0px">Britainia</p>
+                <h3>Good Day 100g</h3>
+                <p>MRP: 10</p>
+                <form method="get">
+                    <label for="quantity">Qty: </label>
+                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
+                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div>
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
+                <p style="color:grey; margin-bottom:0px">Britainia</p>
+                <h3>Good Day 100g</h3>
+                <p>MRP: 10</p>
+                <form method="get">
+                    <label for="quantity">Qty: </label>
+                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
+                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div>
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
+                <p style="color:grey; margin-bottom:0px">Britainia</p>
+                <h3>Good Day 100g</h3>
+                <p>MRP: 10</p>
+                <form method="get">
+                    <label for="quantity">Qty: </label>
+                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
+                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div>
+                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
                 <p style="color:grey; margin-bottom:0px">Britainia</p>
                 <h3>Good Day 100g</h3>
                 <p>MRP: 10</p>
@@ -226,7 +227,7 @@
                         <a href="#"><img src="https://i.ibb.co/b30HMhR/social-youtube.png" alt="Linkedin"> Linkedin</a>
                     </li>
                     <li>
-                        <a href="#"><img style="height: 26px;" src="images/youtube.png" alt="Youtube"> Youtube</a>
+                        <a href="#"><img style="height: 26px;" src="{{url_for('static',filename='images/youtube.png')}}" alt="Youtube"> Youtube</a>
                     </li>
 
                 </ul>
@@ -234,16 +235,17 @@
                     <li>
                         <h3>Download App</h3>
                     </li>
-                    <li><img class="footer-image" src="images/playstore.png" alt=""> </li>
-                    <li style="margin-top: 5px;"><img class="footer-image" src="images/appstore.png" alt=""> </li>
+                    <li><img class="footer-image" src="{{url_for('static',filename='images/playstore.png')}}" alt=""> </li>
+                    <li style="margin-top: 5px;">
+                        <img class="footer-image" src="{{url_for('static',filename='images/apptore.png')}}" " alt=" "> </li>
                 </ul>
             </div>
         </section>
-        <script src="./js/script.js"></script>
-        <script src="https://kit.fontawesome.com/14b274511a.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="{{url_for( 'static',filename='js/script.js' )}} "></script>
+        <script src="https://kit.fontawesome.com/14b274511a.js " crossorigin="anonymous "></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 </body>
 
 </html>
