@@ -10,11 +10,10 @@ app.permanent_session_lifetime = datetime.timedelta(days=1)
 def index():
     return render_template('index.html')
 
-@app.route('/signup_shop1', methods=["POST", "GET"])
-def shop1_sign_up():
+@app.route('/signup_shop1',methods=["POST", "GET"])
+def shop1_signup():
     if request.method == "POST":
         form_data = request.form.to_dict()
-
         fname=form_data['fname']
         lname=form_data['lname']
         passwd=form_data['pass']
@@ -27,11 +26,12 @@ def shop1_sign_up():
             flash("Password doesn't match!")
             render_template('signup_shop1.html')
 
-        if session[email]==0:
-            session[emaiid]=email
+            session['emailid'] = email
+
+
 
         success=dblogin.seller_registration1(fname, lname, email, address, passwd, phno)
-
+        print(str(success))
         if success == 0:
             flash("email or phone no. already exists, please login")
             return render_template('signup_shop1.html')
@@ -42,8 +42,8 @@ def shop1_sign_up():
 
 
 
-@app.route('/signup_shop2', methods=["POST", "GET"])
-def sign_up_shop2():
+@app.route('/signup_shop2',methods=["POST", "GET"])
+def shop2_signup():
     if request.method == "POST":
         form_data = request.form.to_dict()
         sname=form_data['snmae']
@@ -82,16 +82,14 @@ def buyer_signup():
         if passwd != passwdchk:
             flash("Password doesn't match!")
             render_template('signup.html')
-        if session[email] == 0:
-            session[emaiid] = email
 
+        print("fk")
         success = dblogin.buyer_registration(fname, lname, email, address, passwd, phno)
 
         if success == 0:
             flash("email or phone no. already exists, please login")
-            return render_template('signup.html')
         elif success == 1:
-            return render_template('#') #to be filled by buyer dashboard
+            return render_template('index.html') #to be filled by buyer dashboard
     return render_template('signup.html')
 
 if __name__ == "__main__":

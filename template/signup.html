@@ -2,15 +2,25 @@
 <html lang="eng">
 
 <head>
-    <link rel="stylesheet" href="./css/signupstyle.css">
-    <link rel="stylesheet" href="./css/style.css">
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+      </script>
+     {% endif %}
+{% endwith %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/signupstyle.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
 </head>
 
 <body>
     <div class="signup-page">
-        <form class="signup" action="" method="post" autocomplete="off" enctype="multipart/form-data">
+        <form class="signup" method="post" autocomplete="off" enctype="multipart/form-data">
             <h1>Create account</h1>
-            <h2>Want to Register Your Shop with Us ? <a href="./signup_shop1.html"><span>Register Now</span></a></h2>
+            <h2>Want to Register Your Shop with Us ? <a href="{{url_for('shop1_signup')}}"><span>Register Now</span></a></h2>
             <div class="signup__field">
                 <input class="signup__input" type="text" name="fname" id="fname" required />
                 <label class="signup__label" for="fname">First Name</label>
@@ -25,21 +35,22 @@
             </div>
 
             <div class="signup__field">
-                <input class="signup__input" type="password" name="password" id="password" required />
+                <input class="signup__input" type="password" name="pass" id="password" required />
                 <label class="signup__label" for="password">Password</label>
             </div>
             <div class="signup__field">
-                <input class="signup__input" type="text" name="mobile_no" id="mobileno" required />
+                <input class="signup__input" type="password" name="passcheck" id="confirm passsword" required />
+                <label class="signup__label" for="confirm passsword">Confirm Password</label>
+            </div>
+            <div class="signup__field">
+                <input class="signup__input" type="text" name="ph_no" id="mobileno" required />
                 <label class="signup__label" for="mobileno">Mobile No</label>
             </div>
             <div class="signup__field">
                 <input class="signup__input" type="text" name="address" id="address" required />
-                <label class="signup__label" for="address">Address</Address></label>
+                <label class="signup__label" for="address">Address</label>
             </div>
-            <div class="signup__field">
-                <input class="signup__input" type="text" name="confirm passsword" id="confirm passsword" required />
-                <label class="signup__label" for="confirm passsword">Confirm Password</Address></label>
-            </div>
+
 
 
             <input class="submit_button" type="submit" name="signup" id="btn-login" value="Sign up">
