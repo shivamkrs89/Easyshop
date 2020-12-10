@@ -36,7 +36,9 @@ def shop1_signup():
             flash("email or phone no. already exists, please login")
             return render_template('signup_shop1.html')
         elif success == 1:
-            return render_template('signup_shop2.html')
+            print("success")
+            session['owner_info'] = 1
+            return redirect(url_for('shop2_signup'))
 
     return render_template('signup_shop1.html')
 
@@ -44,28 +46,36 @@ def shop1_signup():
 
 @app.route('/signup_shop2',methods=["POST", "GET"])
 def shop2_signup():
-    if request.method == "POST":
-        form_data = request.form.to_dict()
-        sname=form_data['snmae']
-        saddress = form_data['saddress']
-        stype=form_data['stype']
-        email=session.get('emailid')
-        if sname == '':
-            flash("Please enter your shop name")
-            return render_template('signup_shop2.html')
-        elif saddress == '':
-            flash("Please enter shop's address")
-            return render_template('signup_shop2.html')
-        elif stype == '':
-            flash("Please specifythe category of the shop")
-            return render_template('signup_shop2.html')
-        success=dblogin.seller_registration2(email,sname,stype,saddress)
-        if success == 0:
-            flash("same shop name already exists, try different")
-            return render_template('signup_shop2.html')
-        elif success == 1:
-            return render_template('signin.html')
-    return render_template('signup_shop1.html')
+    if session.get('owner_info'):
+            print("shop2")
+            if request.method == "POST":
+                print("gf1")
+                form_data = request.form.to_dict()
+                sname=form_data['sname']
+                saddress = form_data['saddress']
+                stype=form_data['stype']
+                email=session.get('emailid')
+                if sname == '':
+                    flash("Please enter your shop name")
+                    return render_template('signup_shop2.html')
+                elif saddress == '':
+                    flash("Please enter shop's address")
+                    return render_template('signup_shop2.html')
+                elif stype == '':
+                    flash("Please specifythe category of the shop")
+                    return render_template('signup_shop2.html')
+                print("gf1")
+                success = dblogin.seller_registration2(email,sname,stype,saddress)
+                print("gfs")
+                if success == 0:
+                    flash("same shop name already exists, try different")
+                    return render_template('signup_shop2.html')
+                elif success == 1:
+                    return render_template('index.html')
+            print("sdf")
+            return render_template('signup_shop1.html')
+    else:
+       return render_template('signup_shop1.html')
 
 @app.route('/signup',methods=["POST","GET"])
 def buyer_signup():
@@ -83,7 +93,7 @@ def buyer_signup():
             flash("Password doesn't match!")
             render_template('signup.html')
 
-        print("fk")
+
         success = dblogin.buyer_registration(fname, lname, email, address, passwd, phno)
 
         if success == 0:
