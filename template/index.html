@@ -1,8 +1,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./css/signupstyle.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"href="{{url_for('static',filename='css/signupstyle.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -14,8 +14,8 @@
     <div class="container">
         <!-- Nav -->
         <nav class="main-nav">
-            <a href="./index.html">
-                <img src="./images/logo.png" alt="Easyshop" class="logo"></a>
+            <a href="{{url_for('index')}}">>
+                <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyshop" class="logo"></a>
 
             <ul class="right-menu">
                 <li>
@@ -27,7 +27,7 @@
                     </div>
                 </li>
                 <li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
-                <li><a href="signup.html">Register</a></li>
+                <li><a href="{{url_for('buyer_signup')}}">Register</a></li>
                 <li>
                     <a href="cart.php">
                         <i class="fas fa-shopping-cart"></i>

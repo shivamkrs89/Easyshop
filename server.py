@@ -5,18 +5,16 @@ app = Flask(__name__, template_folder='template/')
 app.secret_key = 'the random string'
 app.permanent_session_lifetime = datetime.timedelta(days=1)
 
+@app.route('/')
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
 @app.route('/signup_shop1', methods=["POST", "GET"])
 def shop1_sign_up():
     if request.method == "POST":
         form_data = request.form.to_dict()
-        # fname = form_data['fname']
-        # lname = form_data['lname']
-        # passwd = form_data['pass']
-        # email = form_data['email']
-        # passwdchk = form_data['passcheck']
-        # addr = form_data['address']
-        # phno = str(form_data['ph_no']
+
         fname=form_data['fname']
         lname=form_data['lname']
         passwd=form_data['pass']
@@ -41,6 +39,7 @@ def shop1_sign_up():
             return render_template('signup_shop2.html')
 
     return render_template('signup_shop1.html')
+
 
 
 @app.route('/signup_shop2', methods=["POST", "GET"])
@@ -68,6 +67,32 @@ def sign_up_shop2():
             return render_template('signin.html')
     return render_template('signup_shop1.html')
 
+@app.route('/signup',methods=["POST","GET"])
+def buyer_signup():
+    if request.method == "POST":
+        form_data = request.form.to_dict()
+        fname = form_data['fname']
+        lname = form_data['lname']
+        passwd = form_data['pass']
+        email = form_data['email']
+        passwdchk = form_data['passcheck']
+        address = form_data['address']
+        phno = form_data['ph_no']
+
+        if passwd != passwdchk:
+            flash("Password doesn't match!")
+            render_template('signup.html')
+        if session[email] == 0:
+            session[emaiid] = email
+
+        success = dblogin.buyer_registration(fname, lname, email, address, passwd, phno)
+
+        if success == 0:
+            flash("email or phone no. already exists, please login")
+            return render_template('signup.html')
+        elif success == 1:
+            return render_template('#') #to be filled by buyer dashboard
+    return render_template('signup.html')
 
 if __name__ == "__main__":
     app.run(debug="true")
