@@ -24,13 +24,13 @@ def seller_registration1(fname: str,lname: str, email: str, address: str, passwd
     except:
         return 0  # email exists
 
-def seller_registration2(sname: str,stype:str, saddress: str):#seller's shop info register
+def seller_registration2(email: str,sname: str,stype:str, saddress: str):#seller's shop info register
     mydb = connect()
     mycursor = mydb.cursor()
     try:
         insertFn = "INSERT INTO seller_info (sname,stype,saddress) VALUES (%s, %s, %s)"
         registration_info = (sname,stype,saddress)
-        mycursor.execute(insertFn, registration_info)
+        mycursor.execute("UPDATE seller_info SET sname=\"" + sname + "\" stype=\"" + stype + "\" saddress=\"" + saddress + "\" where email=\"" + email + "\"  ")
         mydb.commit()
         return 1
     except:
