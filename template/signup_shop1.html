@@ -2,16 +2,18 @@
 <html>
 
 <head>
-        {% with messages = get_flashed_messages() %}
-  {% if messages %}
+    {% with messages = get_flashed_messages() %} {% if messages %}
     <script>
-      var messages = {{ messages | safe }};
-      for (var i=0; i<messages.length; i++) {
-        alert(messages[i]);
-      }
-      </script>
-     {% endif %}
-{% endwith %}
+        var messages = {
+            {
+                messages | safe
+            }
+        };
+        for (var i = 0; i < messages.length; i++) {
+            alert(messages[i]);
+        }
+    </script>
+    {% endif %} {% endwith %}
     <link rel="stylesheet" href="{{url_for('static',filename='css/signupstyle.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,7 +44,7 @@
                 <input class="signup__input" type="password" name="pass" id="password" required />
                 <label class="signup__label" for="password">Password</label>
             </div>
-               <div class="signup__field">
+            <div class="signup__field">
                 <input class="signup__input" type="password" name="passcheck" id="confirm passsword" required />
                 <label class="signup__label" for="confirm passsword">Confirm Password</Address></label>
             </div>

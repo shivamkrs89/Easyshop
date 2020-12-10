@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet"href="{{url_for('static',filename='css/signupstyle.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/signupstyle.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,7 +29,7 @@
                 <li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
                 <li><a href="{{url_for('buyer_signup')}}">Register</a></li>
                 <li>
-                    <a href="cart.php">
+                    <a href="{{url_for('cart')}}">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </li>
@@ -48,7 +48,7 @@
                             <button class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <form method="post" >
+                            <form method="post">
                                 <div class="form-group">
                                     <label for="email">email</label>
                                     <input name="email" type="text" placeholder="email" class="form-control">
@@ -75,141 +75,141 @@
         <!-- Home cards 1 -->
         <section class="home-cards">
             <div>
-                <a href="./shop.html">
-                    <img src="images/shop.jpg" alt=""></a>
+                <a href="{{url_for(shop)}}">
+                    <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Annat Gift Shop</h3>
                 <p>Bypass Road,Gaya,Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
-                    <img src="images/shop.jpg" alt=""></a>
+                <a href="{{url_for(shop)}}">
+                    <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 </a>
                 </a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
-                    <img src="images/shop.jpg" alt=""></a>
+                <a href="{{url_for(shop)}}">
+                    <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
-                    <img src="images/shop.jpg" alt=""></a>
+                <a href="{{url_for(shop)}}">
+                    <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
         </section>
 
         <section class="home-cards">
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Annat Gift Shop</h3>
                 <p>Bypass Road,Gaya,Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
-                    <img "{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
+                <a href="{{url_for(shop)}}">
+                    <img href="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
         </section>
         <section class="home-cards">
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Annat Gift Shop</h3>
                 <p>Bypass Road,Gaya,Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
         </section>
         <section class="home-cards">
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Annat Gift Shop</h3>
                 <p>Bypass Road,Gaya,Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
             <div>
-                <a href="./shop.html">
+                <a href="{{url_for(shop)}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
                 <h3>Budget Bazaar</h3>
                 <p>Station Road, Gaya, Bihar
                 </p>
-                <a href="./shop.html">Shop Now <i class="fas fa-chevron-right"></i></a>
+                <a href="{{url_for(shop)}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
         </section>
         <section class="links">
@@ -241,7 +241,7 @@
                         <a href="#"><img src="https://i.ibb.co/b30HMhR/social-youtube.png" alt="Linkedin"> Linkedin</a>
                     </li>
                     <li>
-                        <a href="#"><img style="height: 26px;" src="images/youtube.png" alt="Youtube"> Youtube</a>
+                        <a href="#"><img style="height: 26px;" src="{{url_for('static',filename='images/youtube.png')}}" alt="Youtube"> Youtube</a>
                     </li>
 
                 </ul>
@@ -250,15 +250,16 @@
                         <h3>Download App</h3>
                     </li>
                     <li><img class="footer-image" src="{{url_for('static',filename='images/playstore.png')}}" alt=""> </li>
-                    <li style="margin-top: 5px;"><img class="footer-image" src="{{url_for('static',filename='images/apptore.png')}}"" alt=""> </li>
+                    <li style="margin-top: 5px;">
+                        <img class="footer-image" src="{{url_for('static',filename='images/apptore.png')}}" " alt=" "> </li>
                 </ul>
             </div>
         </section>
-        <script src="{{url_for('static',filename='js/script.js')}}"></script>
-        <script src="https://kit.fontawesome.com/14b274511a.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="{{url_for( 'static',filename='js/script.js' )}} "></script>
+        <script src="https://kit.fontawesome.com/14b274511a.js " crossorigin="anonymous "></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
 </body>
 
 </html>

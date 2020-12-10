@@ -2,7 +2,20 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/signupstyle.css">
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <script>
+        var messages = {
+            {
+                messages | safe
+            }
+        };
+        for (var i = 0; i < messages.length; i++) {
+            alert(messages[i]);
+        }
+    </script>
+    {% endif %} {% endwith %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/signupstyle.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,6 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Register Shop</title>
+
 </head>
 
 <body>
@@ -24,16 +38,19 @@
                 <label class="signup__label" for="shopname">Shop Name</label>
             </div>
             <div class="signup__field">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Shop type
-                        </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Electronics</a>
-                        <a class="dropdown-item" href="#">Kirana</a>
-                        <a class="dropdown-item" href="#">Clothing</a>
-                    </div>
-                </div>
+                <h5>Shop type</h5>
+                <select class="browser-default custom-select custom-select-lg mb-3">
+                            <option selected>Select from here</option>
+                            <option value="1">Clothing</option>
+                            <option value="2">Kirana</option>
+                            <option value="3">Electronics</option>
+                          </select>
+                <script>
+                    // Material Select Initialization
+                    $(document).ready(function() {
+                        $('.mdb-select').materialSelect();
+                    });
+                </script>
             </div>
             <div class="signup__field">
                 <input class="signup__input" type="email" name="shop email" id="email" required />

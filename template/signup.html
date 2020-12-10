@@ -2,16 +2,18 @@
 <html lang="eng">
 
 <head>
-    {% with messages = get_flashed_messages() %}
-  {% if messages %}
+    {% with messages = get_flashed_messages() %} {% if messages %}
     <script>
-      var messages = {{ messages | safe }};
-      for (var i=0; i<messages.length; i++) {
-        alert(messages[i]);
-      }
-      </script>
-     {% endif %}
-{% endwith %}
+        var messages = {
+            {
+                messages | safe
+            }
+        };
+        for (var i = 0; i < messages.length; i++) {
+            alert(messages[i]);
+        }
+    </script>
+    {% endif %} {% endwith %}
     <link rel="stylesheet" href="{{url_for('static',filename='css/signupstyle.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
 </head>
