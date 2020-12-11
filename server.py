@@ -52,10 +52,9 @@ def shop2_signup():
                 form_data = request.form.to_dict()
                 sname=form_data['sname']
                 saddress = form_data['saddress']
-                # stype=form_data['stype']
-                stype="kirana"
+                stype=form_data['stype']
                 email=session.get('emailid')
-                print(email)
+                # print(email)
                 if sname == '':
                     flash("Please enter your shop name")
                     return render_template('signup_shop2.html')

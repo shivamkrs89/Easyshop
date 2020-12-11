@@ -34,17 +34,19 @@
                 <label class="signup__label" for="shopname">Shop Name</label>
             </div>
             <div class="signup__field">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" name="stype" id="stype" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Shop type
-                        </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Electronics</a>
-                        <a class="dropdown-item" href="#">Kirana</a>
-                        <a class="dropdown-item" href="#">Clothing</a>
-                    </div>
-                </div>
+              <h5>Shop type</h5>
+<!--                <input type="text" name='stype'>-->
+<!--                <br>-->
+<!--                <br>-->
+            <select id="mySelect" name = "stype">
+      <option value="Grocery">Grocery</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Stationary">Stationary</option>
+      <option value="Fast food">Fast food</option>
+    </select>
+
             </div>
+
             <div class="signup__field">
                 <input class="signup__input" type="text" name="saddress" id="address" required />
                 <label class="signup__label" for="address">Shop Address</label>
