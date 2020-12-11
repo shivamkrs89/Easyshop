@@ -2,20 +2,17 @@
 <html>
 
 <head>
-    {% with messages = get_flashed_messages() %} {% if messages %}
+        {% with messages = get_flashed_messages() %}
+  {% if messages %}
     <script>
-        var messages = {
-            {
-                messages | safe
-            }
-        };
-        for (var i = 0; i < messages.length; i++) {
-            alert(messages[i]);
-        }
-    </script>
-    {% endif %} {% endwith %}
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+      </script>
+     {% endif %}
+{% endwith %}
     <link rel="stylesheet" href="{{url_for('static',filename='css/signupstyle.css')}}">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,40 +21,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Register Shop</title>
-
 </head>
 
 <body>
 
     <div class="signup-page">
-        <form class="signup" action="" method="post" autocomplete="off" enctype="multipart/form-data">
+        <form class="signup"  method="post" autocomplete="off" enctype="multipart/form-data">
             <h1>Create account</h1>
             <h2>Please let us know about your Shop</h2>
             <div class="signup__field">
-                <input class="signup__input" type="text" name="shopname" id="shopname" required />
+                <input class="signup__input" type="text" name="sname" id="shopname" required />
                 <label class="signup__label" for="shopname">Shop Name</label>
             </div>
             <div class="signup__field">
-                <h5>Shop type</h5>
-                <select class="browser-default custom-select custom-select-lg mb-3">
-                            <option selected>Select from here</option>
-                            <option value="1">Clothing</option>
-                            <option value="2">Kirana</option>
-                            <option value="3">Electronics</option>
-                          </select>
-                <script>
-                    // Material Select Initialization
-                    $(document).ready(function() {
-                        $('.mdb-select').materialSelect();
-                    });
-                </script>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" name="stype" id="stype" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Shop type
+                        </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Electronics</a>
+                        <a class="dropdown-item" href="#">Kirana</a>
+                        <a class="dropdown-item" href="#">Clothing</a>
+                    </div>
+                </div>
             </div>
             <div class="signup__field">
-                <input class="signup__input" type="email" name="shop email" id="email" required />
-                <label class="signup__label" for="shop email">Shop Email</label>
-            </div>
-            <div class="signup__field">
-                <input class="signup__input" type="text" name="address" id="address" required />
+                <input class="signup__input" type="text" name="saddress" id="address" required />
                 <label class="signup__label" for="address">Shop Address</label>
             </div>
 

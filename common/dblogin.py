@@ -28,9 +28,8 @@ def seller_registration2(email: str,sname: str,stype:str, saddress: str):#seller
     mydb = connect()
     mycursor = mydb.cursor()
     try:
-        insertFn = "INSERT INTO seller_info (sname,stype,saddress) VALUES (%s, %s, %s)"
-        registration_info = (sname,stype,saddress)
-        mycursor.execute("UPDATE seller_info SET sname=\"" + sname + "\" stype=\"" + stype + "\" saddress=\"" + saddress + "\" where email=\"" + email + "\"  ")
+        print(sname,stype,saddress,email)
+        mycursor.execute("""UPDATE seller_info SET sname=%s,stype=%s, saddress=%s where email=%s""", (sname, stype, saddress, email))
         mydb.commit()
         return 1
     except:
@@ -40,9 +39,9 @@ def buyer_registration(fname: str,lname: str, email: str, address: str, passwd: 
     mycursor = mydb.cursor()
     hassedPasswd = bcrypt.hashpw(passwd.encode("utf-8"), bcrypt.gensalt())
     try:
-        print("f1")
+
         insertFn = "INSERT INTO buyer_info (fname,lname,email,pass,address,phno) VALUES (%s, %s, %s, %s, %s,%s)"
-        print("f2")
+
         registration_info = (fname,lname, email, hassedPasswd, address, phno)
         mycursor.execute(insertFn, registration_info)
         mydb.commit()
