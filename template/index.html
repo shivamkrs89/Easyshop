@@ -1,6 +1,16 @@
 <html>
 
 <head>
+            {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+      </script>
+     {% endif %}
+{% endwith %}
     <link rel="stylesheet" href="{{url_for('static',filename='css/signupstyle.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -48,16 +58,25 @@
                             <button class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <form method="post">
+                            <form method="post"  autocomplete="off" enctype="multipart/form-data">
+
                                 <div class="form-group">
-                                    <label for="email">email</label>
-                                    <input name="email" type="text" placeholder="email" class="form-control">
+
+                                    <input name="email" type="email" placeholder="email" class="form-control" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input name="pass" type="password" placeholder="Password" class="form-control">
+                                    <input name="pass" type="password" placeholder="Password" class="form-control" required>
                                 </div>
+                                                <div class="form-group">
+         <label for="TYPE">USER TYPE:</label>
+            <select id="mySelect" name = "usertype">
+      <option value="1">BUYER</option>
+      <option value="2">SELLER</option>
 
+    </select>
+
+            </div>
 
                                 <div class="modal-footer">
                                     <button name="login" type="submit" class="btn btn-primary">Login</button>

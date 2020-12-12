@@ -11,9 +11,12 @@
     <div class="container">
         <!-- Nav -->
         <nav class="main-nav">
-            <a href="{{url_for('index')}}">
+            <a href="{{url_for('buyer_dashboard')}}">
                 <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyshop" class="logo"></a>
-
+           <div>
+               <h4>hii {{fname}} {{lname}}</h4>
+               <a href="{{url_for('profile_update')}}">update profile</a>
+           </div>
 
 
             <ul class="right-menu">
@@ -28,12 +31,10 @@
                 <div class="containe">
                     <li>Shop By Category
                         <ul class="drop-menu menu-4" style="display:inline">
-                            <li><a href="">CATEGORY 1</a></li>
-                            <li><a href="">CATEGORY 2</a></li>
-                            <li><a href="">CATEGORY 3</a></li>
-                            <li><a href="">CATEGORY 4</a></li>
-                            <li><a href="">CATEGORY 5</a></li>
-                            <li><a href="">CATEGORY 6</a></li>
+                            <li><a href="">GROCERY</a></li>
+                            <li><a href="">ELECTRONICS</a></li>
+                            <li><a href="">STATIONARY</a></li>
+                            <li><a href="">FAST FOOD</a></li>
                         </ul>
                     </li>
                 </div>
@@ -43,7 +44,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{url_for('cart')}}">
+                    <a href="#">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </a>
                 </li>

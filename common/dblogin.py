@@ -74,6 +74,9 @@ def buyer_login(emailid: str, passwd: str):
     else:
         hassedPasswd = fetched_list[0][0]
         if bcrypt.checkpw(passwd.encode("utf-8"), hassedPasswd.encode("utf-8")):
-            return 1  # login success
+            mycursor.execute("SELECT fname,lname,pass,phno from buyer_info where email = \"" + emailid + "\"")
+            fetched_list = mycursor.fetchall()
+            print(fetched_list)
+            return fetched_list  # login success
         else:
-            return 0  # incorrect password
+            return [(0)]  # incorrect password
