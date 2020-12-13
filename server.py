@@ -1,9 +1,7 @@
 from flask import Flask, request, session, render_template, flash, redirect, url_for
-import datetime
 from common import dblogin, dboperations
 app = Flask(__name__, template_folder='template/')
 app.secret_key = 'the random string'
-app.permanent_session_lifetime = datetime.timedelta(days=1)
 
 @app.route('/')
 def home():
