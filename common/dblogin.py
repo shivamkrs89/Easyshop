@@ -68,8 +68,8 @@ def buyer_login(emailid: str, passwd: str):
     mycursor = mydb.cursor()
     mycursor.execute("SELECT pass from buyer_info where email = \"" + emailid + "\"")
     fetched_list = mycursor.fetchall()
-    if (len(fetched_list) == 0):
-        return -1  # email id not found
+    if  len(fetched_list) == 0:
+        return [(-1)]  # email id not found
 
     else:
         hassedPasswd = fetched_list[0][0]

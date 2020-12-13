@@ -1,252 +1,160 @@
 <!DOCTYPE html>
-<html lang="eng">
-
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="{{url_for('static',filename='css/signupstyle.css')}}">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
-    <title>Shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bootstrap E-Commerce Template- DIGI Shop mini</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet">
+    <!-- Fontawesome core CSS -->
+    <link href="{{url_for('static',filename='css/font-awesome.min.css')}}" rel="stylesheet" />
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--Slide Show Css -->
+    <link href="{{url_for('static',filename='ItemSlider/css/main-style.css')}}" rel="stylesheet" />
+    <!-- custom CSS here -->
+    <link href="{{url_for('static',filename='css/style2.css')}}" rel="stylesheet" />
 </head>
-
 <body>
-    <div class="container">
-        <!-- Nav -->
-        <nav class="main-nav">
-            <a href="{{url_for('buyer_dashboard')}}">
-                <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyshop" class="logo"></a>
-           <div>
-               <h4>hii {{fname}} {{lname}}</h4>
-               <a href="{{url_for('profile_update')}}">update profile</a>
-           </div>
-
-
-            <ul class="right-menu">
-                <li>
-                    <div class="search">
-                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
-                        <button type="submit" class="searchButton">
-                   <i class="fa fa-search"></i>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                    </div>
-                </li>
-                <div class="containe">
-                    <li>Shop By Category
-                        <ul class="drop-menu menu-4" style="display:inline">
-                            <li><a href="">GROCERY</a></li>
-                            <li><a href="">ELECTRONICS</a></li>
-                            <li><a href="">STATIONARY</a></li>
-                            <li><a href="">FAST FOOD</a></li>
+                <a href="{{url_for('buyer_dashboard')}}">
+                    <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyshop" class="logo" height="50" width="50"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                <ul class="nav navbar-nav navbar-right">
+                     <li><a href="{{url_for('profile_update')}}">Update Profile</a> </li>
+                    <li><a href="{{url_for('signout')}}">Logout</a></li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">24x7 Support <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                            <li><a href="#"><strong>Call: </strong>+91-7667659672</a></li>
+                            <li><a href="#"><strong>Mail: </strong>easyshop@co.in</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><strong>Address: </strong>
+                                <div>
+                                    234, CUSAT Street,<br />
+                                    Kochi, INDIA
+                                </div>
+                            </a></li>
                         </ul>
                     </li>
-                </div>
-                <li>
-                    <a href="">
-                        <i class="fas fa-shopping-cart"></i>
+                    <li>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart" alt="cart"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </a>
                 </li>
-            </ul>
-        </nav>
-
-        <!-- Showcase -->
-
-        <!-- Home cards 1 -->
-
-        <div class="shop-top">
-            <img src="{{url_for('static',filename='images/shop.jpg')}}" alt="Shop-image" style="width:100%;height:290px; margin-bottom:5px">
-            <h1 style="text-align:center;color: #b80019;">Annat Gift Shop</h1>
-            <p style="text-align:center;color:grey; margin-bottom:60px">Bypass Road,Gaya,Bihar</p>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter Keyword Here ..." class="form-control">
+                    </div>
+                    &nbsp;
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <section class="home-cards">
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-        </section>
-        <section class="home-cards">
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-        </section>
-        <section class="home-cards">
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-            <div>
-                <img src="{{url_for('static',filename='images/good_day.jpg')}}" alt="">
-                <p style="color:grey; margin-bottom:0px">Britainia</p>
-                <h3>Good Day 100g</h3>
-                <p>MRP: 10</p>
-                <form method="get">
-                    <label for="quantity">Qty: </label>
-                    <input style="width:70px;display:inline" name="quantity" class="form-control " type="number" id="number" value="1" min="1">
-                    <button name="add" class="btn btn-success bg-light text-dark " value="<?php echo $product_id ?>">ADD  <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
-                </form>
-            </div>
-        </section>
+        <!-- /.container-fluid -->
+    </nav>
 
-        <section class="links">
-            <div class="links-inner">
-                <ul>
-                    <li>
-                        <h3>Useful Links</h3>
-                    </li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms Of Use</a></li>
-                    <li><a href="#">Return Policy</a></li>
-                </ul>
-                <ul>
-                    <li>
-                        <h3>Company</h3>
-                    </li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact US</a></li>
-                    <li><a href="#">Locate Us</a></li>
-                </ul>
-                <ul>
-                    <li>
-                        <h3>Follow Us</h3>
-                    </li>
-                    <li>
-                        <a href="#"><img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook"> Facebook</a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="https://i.ibb.co/b30HMhR/social-youtube.png" alt="Linkedin"> Linkedin</a>
-                    </li>
-                    <li>
-                        <a href="#"><img style="height: 26px;" src="{{url_for('static',filename='images/youtube.png')}}" alt="Youtube"> Youtube</a>
-                    </li>
-
-                </ul>
-                <ul>
-                    <li>
-                        <h3>Download App</h3>
-                    </li>
-                    <li><img class="footer-image" src="{{url_for('static',filename='images/playstore.png')}}" alt=""> </li>
-                    <li style="margin-top: 5px;">
-                        <img class="footer-image" src="{{url_for('static',filename='images/apptore.png')}}" " alt=" "> </li>
-                </ul>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Send a Quick Query </strong>
+                <hr>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required="required" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required="required" placeholder="Email address">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <textarea name="message" id="message" required="required" class="form-control" rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Submit Request</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </section>
-        <script src="{{url_for( 'static',filename='js/script.js' )}} "></script>
-        <script src="https://kit.fontawesome.com/14b274511a.js " crossorigin="anonymous "></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+
+            <div class="col-md-4">
+                <strong>Our Location</strong>
+                <hr>
+                <p>
+                     234, New york Street,<br />
+                                    Just Location, USA<br />
+                    Call: +09-456-567-890<br>
+                    Email: info@yourdomain.com<br>
+                </p>
+
+                2014 www.yourdomain.com | All Right Reserved
+            </div>
+            <div class="col-md-4 social-box">
+                <strong>We are Social </strong>
+                <hr>
+                <a href="#"><i class="fa fa-facebook-square fa-3x "></i></a>
+                <a href="#"><i class="fa fa-twitter-square fa-3x "></i></a>
+                <a href="#"><i class="fa fa-google-plus-square fa-3x c"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square fa-3x "></i></a>
+                <a href="#"><i class="fa fa-pinterest-square fa-3x "></i></a>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- /.col -->
+    <div class="col-md-12 end-box ">
+        &copy; 2014 | &nbsp; All Rights Reserved | &nbsp; www.yourdomain.com | &nbsp; 24x7 support | &nbsp; Email us: info@yourdomain.com
+    </div>
+    <!-- /.col -->
+    <!--Footer end -->
+    <!--Core JavaScript file  -->
+    <script src="{{url_for('static',filename='js/jquery-1.10.2.js')}}"></script>
+    <!--bootstrap JavaScript file  -->
+    <script src="{{url_for('static',filename='js/bootstrap.js')}}"></script>
+    <!--Slider JavaScript file  -->
+    <script src="{{url_for('static',filename='js/modernizr.custom.63321.js')}}"></script>
+    <script src="{{url_for('static',filename='js/jquery.catslider.js')}}"></script>
+    <script>
+        $(function () {
+
+            $('#mi-slider').catslider();
+
+        });
+		</script>
 </body>
-
 </html>

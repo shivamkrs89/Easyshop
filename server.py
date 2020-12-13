@@ -18,14 +18,14 @@ def index():
         email=form_data['email']
         passwd=form_data['pass']
         usertype=form_data['usertype']
-        success=0
         list=[]
-        if int(usertype) == 1:
-            print(email, usertype)
-            list = dblogin.buyer_login(email, passwd)
+        # if int(usertype) == 1:
+        print(email, usertype)
+        list = dblogin.buyer_login(email, passwd)
 
-        if list[0][0]==0:
-            flash("Credentials mismatched")
+
+        if list[0][0]==0 or list[0][0]==-1:
+            flash("Credentials mismatched or email not not found")
             render_template('index.html')
 
         else:
