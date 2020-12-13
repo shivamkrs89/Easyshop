@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c0447055-ea8b-4d0a-b710-32a692a3c18f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lNmcgOiYDQ8Y5kN7Rl0mKPcHr5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maharaj Ji\PycharmProjects\EASYSHOP\Easyshop\static" />
+      <recent name="C:\Users\Maharaj Ji\PycharmProjects\EASYSHOP\Easyshop" />
+      <recent name="C:\Users\Maharaj Ji\PycharmProjects\EASYSHOP\Easyshop\template" />
+      <recent name="C:\Users\Maharaj Ji\PycharmProjects\EASYSHOP\Easyshop\common" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.server (1)">
+    <configuration name="server (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Easyshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Easyshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Maharaj Ji\PycharmProjects\EASYSHOP\Easyshop\server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.server (1)" />
+        <item itemvalue="Python.server" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0447055-ea8b-4d0a-b710-32a692a3c18f" name="Default Changelist" comment="" />
+      <created>1607446004056</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607446004056</updated>
+    </task>
+    <task id="LOCAL-00001" summary="added dblogin.py to new directory common and created server.py file with signup function.">
+      <created>1607450773642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607450773642</updated>
+    </task>
+    <task id="LOCAL-00002" summary="shop registration takes place in two phases first seller's details and second shop details.&#10;databsae in adjusted accordingly.&#10;fnmae and lname both asked.">
+      <created>1607535947932</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607535947932</updated>
+    </task>
+    <task id="LOCAL-00003" summary="email from first part of seller registration is sent to 2nd via session">
+      <created>1607583106989</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607583106989</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update statement is used to update the table of seller info.">
+      <created>1607583481684</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607583481684</updated>
+    </task>
+    <task id="LOCAL-00005" summary="hardcoded in index.html(some might be missing) and changed the directory as per flask requirements i.e static and template .">
+      <created>1607586472257</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607586472257</updated>
+    </task>
+    <task id="LOCAL-00006" summary="hardcoding and flashing messages in signup_shop1.html signup.html.">
+      <created>1607618094577</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607618094577</updated>
+    </task>
+    <task id="LOCAL-00007" summary="bekar">
+      <created>1607624414814</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607624414814</updated>
+    </task>
+    <task id="LOCAL-00008" summary="buyer and seller signup synced with database.category thing still is not working properly.">
+      <created>1607669837844</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607669837844</updated>
+    </task>
+    <task id="LOCAL-00009" summary="buyer and seller registration working.">
+      <created>1607702638487</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607702638487</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update profile function added linked with database.&#10;need to improve css of update profile page.">
+      <created>1607795132821</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607795132821</updated>
+    </task>
+    <task id="LOCAL-00011" summary="improved css of update profile page.&#10;destroyed css of index.html">
+      <created>1607848469087</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607848469087</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added css and js.">
+      <created>1607849527215</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607849527215</updated>
+    </task>
+    <task id="LOCAL-00013" summary="displayed a sample of cards to be displayed in index page,and created category wise display function of the shops which returns list of shops.">
+      <created>1607882827987</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607882827987</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added dblogin.py to new directory common and created server.py file with signup function." />
+    <MESSAGE value="shop registration takes place in two phases first seller's details and second shop details.&#10;databsae in adjusted accordingly.&#10;fnmae and lname both asked." />
+    <MESSAGE value="email from first part of seller registration is sent to 2nd via session" />
+    <MESSAGE value="update statement is used to update the table of seller info." />
+    <MESSAGE value="hardcoded in index.html(some might be missing) and changed the directory as per flask requirements i.e static and template ." />
+    <MESSAGE value="hardcoding and flashing messages in signup_shop1.html signup.html." />
+    <MESSAGE value="bekar" />
+    <MESSAGE value="buyer and seller signup synced with database.category thing still is not working properly." />
+    <MESSAGE value="buyer and seller registration working." />
+    <MESSAGE value="update profile function added linked with database.&#10;need to improve css of update profile page." />
+    <MESSAGE value="improved css of update profile page.&#10;destroyed css of index.html" />
+    <MESSAGE value="added css and js." />
+    <MESSAGE value="displayed a sample of cards to be displayed in index page,and created category wise display function of the shops which returns list of shops." />
+    <option name="LAST_COMMIT_MESSAGE" value="displayed a sample of cards to be displayed in index page,and created category wise display function of the shops which returns list of shops." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2" timestamp="1607883177906">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607883177906" />
+    <state x="129" y="55" key="DiffContextDialog" timestamp="1607883272599">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607883272599" />
+    <state width="1345" height="185" key="GridCell.Tab.0.bottom" timestamp="1607883307650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607883307650" />
+    <state width="1345" height="185" key="GridCell.Tab.0.center" timestamp="1607883307650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607883307650" />
+    <state width="1345" height="185" key="GridCell.Tab.0.left" timestamp="1607883307650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607883307650" />
+    <state width="1345" height="185" key="GridCell.Tab.0.right" timestamp="1607883307650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607883307650" />
+    <state width="1367" height="231" key="GridCell.Tab.1.bottom" timestamp="1607849787690">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="231" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607849787690" />
+    <state width="1367" height="231" key="GridCell.Tab.1.center" timestamp="1607849787690">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="231" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607849787690" />
+    <state width="1367" height="231" key="GridCell.Tab.1.left" timestamp="1607849787690">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="231" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607849787690" />
+    <state width="1367" height="231" key="GridCell.Tab.1.right" timestamp="1607849787690">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="231" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607849787690" />
+    <state x="395" y="80" key="MultipleFileMergeDialog" timestamp="1607624689196">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="395" y="80" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1607624689196" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1607849444325">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607849444325" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607883296642">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607883296642" />
+    <state x="396" y="155" key="git4idea.merge.GitPullDialog" timestamp="1607882021055">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="396" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1607882021055" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/server.py</url>
+          <line>166</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
