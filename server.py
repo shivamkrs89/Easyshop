@@ -1,9 +1,8 @@
 from flask import Flask, request, session, render_template, flash, redirect, url_for
-import datetime
 from common import dblogin, dboperations
 app = Flask(__name__, template_folder='template/')
 app.secret_key = 'the random string'
-app.permanent_session_lifetime = datetime.timedelta(days=1)
+# app.permanent_session_lifetime = datetime.timedelta(days=1)
 
 @app.route('/')
 def home():
@@ -36,8 +35,13 @@ def index():
             session['ph_no']=list[0][3]
             return redirect(url_for('buyer_dashboard'))
 
+    list1=dboperations.getcatwise("Electronics")
+    list2=dboperations.getcatwise("Grocery")
+    list3=dboperations.getcatwise("Fast food")
+    list4=dboperations.getcatwise("Stationary")
+    list5=dboperations.getcatwise("Category")
 
-    return render_template('index.html')
+    return render_template('index.html',list1=list1,list2=list2,list3=list3,list4=list4,list5=list5)
 
 @app.route('/signup_shop1',methods=["POST", "GET"])
 def shop1_signup():

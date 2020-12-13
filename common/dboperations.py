@@ -26,3 +26,11 @@ def update_profile(fname:str,lname:str,email:str,passwd:str,ph_no:str,usertype:i
                             (fname, lname, email, passwd, ph_no, email))
            mydb.commit()
 
+def getcatwise(cat:str):
+    mydb = connect()
+    mycursor = mydb.cursor()
+    statement="SELECT * from seller_info"
+    mycursor.execute(statement)
+    fetched_list = mycursor.fetchall()
+
+    return fetched_list
