@@ -5,12 +5,13 @@ def connect():
         mydb = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='Somya@123',
+            password='shivam@123',
             database='easyshop',
         )
     except:
         connect()
     return mydb
+
 
 def update_profile(fname:str,lname:str,email:str,passwd:str,ph_no:str,usertype:int):
        mydb = connect()
@@ -21,10 +22,12 @@ def update_profile(fname:str,lname:str,email:str,passwd:str,ph_no:str,usertype:i
             mycursor.execute("""UPDATE buyer_info SET fname=%s,lname=%s, email=%s, pass=%s,phno=%s where email=%s""",
                              (fname, lname, email, hassedPasswd,ph_no,email))
             mydb.commit()
+            return 1
        else:
            mycursor.execute("""UPDATE seller_info SET fname=%s,lname=%s, email=%s, pass=%s,phno=%s where email=%s""",
                             (fname, lname, email, passwd, ph_no, email))
            mydb.commit()
+           return 0
 
 def getcatwise(cat:str):
     mydb = connect()
@@ -32,5 +35,16 @@ def getcatwise(cat:str):
     statement="SELECT * from seller_info"
     mycursor.execute(statement)
     fetched_list = mycursor.fetchall()
+    if fetched_list == None:
+        return [('0','0','0','0','0','0','0','0')]
+    return fetched_list
 
+def searchbyname(name:str):
+    mydb = connect()
+    mycursor = mydb.cursor()
+    statement = """SELECT * from seller_info where sname=%s"""
+    mycursor.execute(statement, name)
+    fetched_list = mycursor.fetchall()
+    if fetched_list == None:
+        return [(0)]
     return fetched_list

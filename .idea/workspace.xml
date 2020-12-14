@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0447055-ea8b-4d0a-b710-32a692a3c18f" name="Default Changelist" comment="" />
+    <list default="true" id="c0447055-ea8b-4d0a-b710-32a692a3c18f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/dblogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/dblogin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/dboperations.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/dboperations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/shop.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,6 +94,9 @@
         <item itemvalue="Python.server" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",HTML5_OUTLINE_MODE" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -190,7 +200,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607882827987</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="created category wise display function of the shops which returns list of shops.">
+      <created>1607883180205</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607883180205</updated>
+    </task>
+    <task id="LOCAL-00015" summary="displayed a sample of cards to be displayed in index page,and,created category wise display function of the shops which returns list of shops.">
+      <created>1607883396759</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1607883396759</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -207,75 +231,70 @@
     <MESSAGE value="improved css of update profile page.&#10;destroyed css of index.html" />
     <MESSAGE value="added css and js." />
     <MESSAGE value="displayed a sample of cards to be displayed in index page,and created category wise display function of the shops which returns list of shops." />
-    <option name="LAST_COMMIT_MESSAGE" value="displayed a sample of cards to be displayed in index page,and created category wise display function of the shops which returns list of shops." />
+    <MESSAGE value="created category wise display function of the shops which returns list of shops." />
+    <MESSAGE value="displayed a sample of cards to be displayed in index page,and,created category wise display function of the shops which returns list of shops." />
+    <option name="LAST_COMMIT_MESSAGE" value="displayed a sample of cards to be displayed in index page,and,created category wise display function of the shops which returns list of shops." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2" timestamp="1607883177906">
+    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2" timestamp="1607883395218">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607883177906" />
-    <state x="129" y="55" key="DiffContextDialog" timestamp="1607883272599">
+    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607883395218" />
+    <state x="129" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1607883809329">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607883272599" />
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom" timestamp="1607883307650">
+    <state x="129" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607883809329" />
+    <state width="1345" height="185" key="GridCell.Tab.0.bottom" timestamp="1607927860220">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607883307650" />
-    <state width="1345" height="185" key="GridCell.Tab.0.center" timestamp="1607883307650">
+    <state width="1345" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607927860220" />
+    <state width="1345" height="185" key="GridCell.Tab.0.center" timestamp="1607927860220">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607883307650" />
-    <state width="1345" height="185" key="GridCell.Tab.0.left" timestamp="1607883307650">
+    <state width="1345" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607927860220" />
+    <state width="1345" height="185" key="GridCell.Tab.0.left" timestamp="1607927860220">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607883307650" />
-    <state width="1345" height="185" key="GridCell.Tab.0.right" timestamp="1607883307650">
+    <state width="1345" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607927860220" />
+    <state width="1345" height="185" key="GridCell.Tab.0.right" timestamp="1607927860220">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607883307650" />
-    <state width="1367" height="231" key="GridCell.Tab.1.bottom" timestamp="1607849787690">
+    <state width="1345" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607927860220" />
+    <state width="1367" height="231" key="GridCell.Tab.1.bottom" timestamp="1607884443612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="231" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607849787690" />
-    <state width="1367" height="231" key="GridCell.Tab.1.center" timestamp="1607849787690">
+    <state width="1367" height="231" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607884443612" />
+    <state width="1367" height="231" key="GridCell.Tab.1.center" timestamp="1607884443612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="231" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607849787690" />
-    <state width="1367" height="231" key="GridCell.Tab.1.left" timestamp="1607849787690">
+    <state width="1367" height="231" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607884443612" />
+    <state width="1367" height="231" key="GridCell.Tab.1.left" timestamp="1607884443612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="231" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607849787690" />
-    <state width="1367" height="231" key="GridCell.Tab.1.right" timestamp="1607849787690">
+    <state width="1367" height="231" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607884443612" />
+    <state width="1367" height="231" key="GridCell.Tab.1.right" timestamp="1607884443612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="231" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607849787690" />
-    <state x="395" y="80" key="MultipleFileMergeDialog" timestamp="1607624689196">
+    <state width="1367" height="231" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607884443612" />
+    <state x="395" y="80" key="MultipleFileMergeDialog" timestamp="1607883472434">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="395" y="80" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1607624689196" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1607849444325">
+    <state x="395" y="80" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1607883472434" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1607926924334">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607849444325" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607883296642">
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607926924334" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607883643198">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607883296642" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607883643198" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1607923015424">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1607923015424" />
     <state x="396" y="155" key="git4idea.merge.GitPullDialog" timestamp="1607882021055">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="396" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1607882021055" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/server.py</url>
-          <line>166</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

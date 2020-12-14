@@ -5,7 +5,7 @@ def connect():
         mydb = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='Somya@123',
+            password='shivam@123',
             database='easyshop',
         )
     except:

@@ -35,13 +35,10 @@ def index():
             session['ph_no']=list[0][3]
             return redirect(url_for('buyer_dashboard'))
 
-    list1=dboperations.getcatwise("Electronics")
-    list2=dboperations.getcatwise("Grocery")
-    list3=dboperations.getcatwise("Fast food")
-    list4=dboperations.getcatwise("Stationary")
-    list5=dboperations.getcatwise("Category")
+    list1 = dboperations.getcatwise("Electronics")
 
-    return render_template('index.html',list1=list1,list2=list2,list3=list3,list4=list4,list5=list5)
+
+    return render_template('index.html',list1=list1)
 
 @app.route('/signup_shop1',methods=["POST", "GET"])
 def shop1_signup():
@@ -164,8 +161,8 @@ def profile_update():
             new_mobileno=form_data['new_mobileno']
             new_pass=form_data['new_pass']
             usertype=session.get('user_type')
-            dboperations.update_profile(fname,lname,new_email,new_pass,new_mobileno,usertype)
-            flash("Profile is updated login again")
+            success = dboperations.update_profile(fname,lname,new_email,new_pass,new_mobileno,usertype)
+            flash("Profile is updated login again"+str(success))
             return redirect(url_for('signout'))
         return render_template('update_profile.html',email=email,fname=fname,lname=lname,ph_no=ph_no,usertype=usertype)
     return redirect(url_for('index'))
