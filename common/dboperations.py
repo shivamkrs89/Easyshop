@@ -46,5 +46,13 @@ def searchbyname(name:str):
     mycursor.execute(statement, name)
     fetched_list = mycursor.fetchall()
     if fetched_list == None:
-        return [(0)]
+        return
+
+def shopbyID(userID :str):
+    mydb=connect()
+    mycursor=mydb.cursor()
+    mycursor.execute("SELECT sname,prod_name,price from shop_products where shop_id = \"" + userID + "\"")
+    fetched_list = mycursor.fetchall()
+    if fetched_list == None:
+        return [('0', '0', '0')]
     return fetched_list

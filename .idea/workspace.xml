@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0447055-ea8b-4d0a-b710-32a692a3c18f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/template/shop_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/dblogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/dblogin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/dboperations.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/dboperations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/shop.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -214,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607883396759</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="bekar">
+      <created>1607929765386</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1607929765386</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -224,7 +230,6 @@
     <MESSAGE value="update statement is used to update the table of seller info." />
     <MESSAGE value="hardcoded in index.html(some might be missing) and changed the directory as per flask requirements i.e static and template ." />
     <MESSAGE value="hardcoding and flashing messages in signup_shop1.html signup.html." />
-    <MESSAGE value="bekar" />
     <MESSAGE value="buyer and seller signup synced with database.category thing still is not working properly." />
     <MESSAGE value="buyer and seller registration working." />
     <MESSAGE value="update profile function added linked with database.&#10;need to improve css of update profile page." />
@@ -233,33 +238,34 @@
     <MESSAGE value="displayed a sample of cards to be displayed in index page,and created category wise display function of the shops which returns list of shops." />
     <MESSAGE value="created category wise display function of the shops which returns list of shops." />
     <MESSAGE value="displayed a sample of cards to be displayed in index page,and,created category wise display function of the shops which returns list of shops." />
-    <option name="LAST_COMMIT_MESSAGE" value="displayed a sample of cards to be displayed in index page,and,created category wise display function of the shops which returns list of shops." />
+    <MESSAGE value="bekar" />
+    <option name="LAST_COMMIT_MESSAGE" value="bekar" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2" timestamp="1607883395218">
+    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2" timestamp="1607929755952">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607883395218" />
+    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607929755952" />
     <state x="129" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1607883809329">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607883809329" />
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom" timestamp="1607927860220">
+    <state width="1345" height="185" key="GridCell.Tab.0.bottom" timestamp="1607972098047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607927860220" />
-    <state width="1345" height="185" key="GridCell.Tab.0.center" timestamp="1607927860220">
+    <state width="1345" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607972098047" />
+    <state width="1345" height="185" key="GridCell.Tab.0.center" timestamp="1607972098047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607927860220" />
-    <state width="1345" height="185" key="GridCell.Tab.0.left" timestamp="1607927860220">
+    <state width="1345" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607972098047" />
+    <state width="1345" height="185" key="GridCell.Tab.0.left" timestamp="1607972098047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607927860220" />
-    <state width="1345" height="185" key="GridCell.Tab.0.right" timestamp="1607927860220">
+    <state width="1345" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607972098047" />
+    <state width="1345" height="185" key="GridCell.Tab.0.right" timestamp="1607972098047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607927860220" />
+    <state width="1345" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607972098047" />
     <state width="1367" height="231" key="GridCell.Tab.1.bottom" timestamp="1607884443612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -284,14 +290,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607926924334" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607883643198">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607929882612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607883643198" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1607923015424">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607929882612" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1607964229860">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1607923015424" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1607964229860" />
     <state x="396" y="155" key="git4idea.merge.GitPullDialog" timestamp="1607882021055">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

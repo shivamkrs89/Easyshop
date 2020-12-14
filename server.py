@@ -136,7 +136,8 @@ def buyer_dashboard():
         fname=session.get('fname')
         lname=session.get('lname')
         session['user_type'] = 1
-        return render_template('shop.html', email=email,fname=fname,lname=lname)
+        list1 = dboperations.getcatwise("Electronics")
+        return render_template('shop.html', email=email,fname=fname,lname=lname,list1=list1)
 
 @app.route('/signout', methods=["POST", "GET"])
 def signout():
@@ -165,6 +166,14 @@ def profile_update():
             flash("Profile is updated login again"+str(success))
             return redirect(url_for('signout'))
         return render_template('update_profile.html',email=email,fname=fname,lname=lname,ph_no=ph_no,usertype=usertype)
+    return redirect(url_for('index'))
+
+@app.route('/shop_details/<userid>',methods=["POST","GET"])
+def display_shop(userid):
+    if session.get('buyer_logged_in'):
+        list=dboperations.shopbyID(userid)
+        length=len(list)
+        return render_template('shop_details.html',list=list,length=length)
     return redirect(url_for('index'))
 if __name__ == "__main__":
     app.run(debug="true")
