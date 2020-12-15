@@ -79,21 +79,22 @@
         <!-- /.container-fluid -->
     </nav>
     <section class="home-cards">
-     <div>
+
          <p>Buy Products from {{list[0][0]}}</p>
                     {%for i in range(0, length)%}
                             <div>
-                             <div>
-                                <div>
+                             <div class="row">
+                                <div class="col-md-4">
 
                                         <h3 class="font-weight-normal mb-3">{{list[i][1]}}
                                      </h3>
-                                    <h4 class="mb-5">Price: Rs.{{list[i][2]}}</h4>
+                                    <h4 class="mb-5">Price: &#x20B9;{{list[i][2]}}</h4>
 
                                 </div>
                               </div>
                         {%endfor%}
                     </div>
+            </div>
      </div>
     </section>
 

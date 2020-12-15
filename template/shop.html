@@ -81,16 +81,19 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-<section class="home-cards">
+    <div class="row">
+        <div class="col-md-5">
+    <section >
             <div>
                 <a href="{{url_for('display_shop',userid=list1[0][0])}}">
                   
                 <h3>{{list1[0][6]}}</h3>
                 <p>{{list1[0][7]}}</p>
-                <a href="{{url_for('display_shop',userid=list1[0][0])}}">Shop Now <i class="fas fa-chevron-right"></i></a>
+                    <a href="{{url_for('display_shop',userid=list1[0][0])}}">Shop Now <i class="fas fa-chevron-right"></i></a></a>
             </div>
-                    </section>
-    <section class="home-cards">
+                    </section></div>
+            <div class="col-md-5">
+    <section >
             <div>
                 <a href="{{url_for('display_shop',userid=list1[1][0])}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
@@ -98,8 +101,9 @@
                 <p>{{list1[1][7]}}</p>
                 <a href="{{url_for('display_shop',userid=list1[1][0])}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
-                    </section>
-    <section class="home-cards">
+    </section></div></div>
+        <span class="col-md-5" >
+    <section >
             <div>
                 <a href="{{url_for('display_shop',userid=list1[2][0])}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
@@ -107,8 +111,10 @@
                 <p>{{list1[2][7]}}</p>
                 <a href="{{url_for('display_shop',userid=list1[2][0])}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
-                    </section>
-    <section class="home-cards">
+                    </section></span>
+    <div class="row">
+        <div class="col-md-5">
+    <section  >
             <div>
                 <a href="{{url_for('display_shop',userid=list1[3][0])}}">
                     <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
@@ -116,8 +122,8 @@
                 <p>{{list1[3][7]}}</p>
                 <a href="{{url_for('display_shop',userid=list1[3][0])}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
-                    </section>
-
+    </section></div>
+        </div>
         <div class="row">
             <div class="col-md-4">
                 <strong>Send a Quick Query </strong>
