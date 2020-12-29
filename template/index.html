@@ -12,6 +12,7 @@
      {% endif %}
 {% endwith %}
     <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" />
+     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -24,7 +25,7 @@
 
        <div class="container">
         <!-- Nav -->
-        <nav class="main-nav"style="background-color:black" >
+        <nav class="main-nav" style="background-color:black" >
             <a href="{{url_for('index')}}">
                 <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyshop" class="logo"></a>
 
@@ -67,10 +68,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input name="pass" type="password" placeholder="Password" class="form-control" required>
+                                    <input id="password" name="pass" type="password" placeholder="Password" class="form-control" required>
                                 </div>
                                                 <div class="form-group">
-         <label for="TYPE">USER TYPE:</label>
+         <label for="myselect">USER TYPE:</label>
             <select id="mySelect" name = "usertype">
       <option value="1">BUYER</option>
       <option value="2">SELLER</option>
@@ -93,13 +94,40 @@
         <!-- Showcase -->
 
         <!-- Home cards 1 -->
+           <section>
+               <div align="center">
+                    <img src="{{url_for('static',filename='images/online_shop.jpg')}}" alt="" align="center"></a>
+               </div>
+           </section>
         <section class="home-cards">
             <div>
                 <a onclick="givealert()">
-                    <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
-                <h3>{{list1[0][6]}}</h3>
-                <p>{{list1[0][7]}}</p>
+                    <img src="{{url_for('static',filename='images/grocers.jpg')}}" alt="" ></a>
+                <h3>GROCERY</h3>
+                <p>Buy from best Grocery Retailers.</p>
                 <a onclick="givealert()">Shop Now <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div>
+                <a onclick="givealert()">
+                    <img src="{{url_for('static',filename='images/stationers.jpg')}}" alt="" ></a>
+                <h3>STATIONARY</h3>
+                <p>Buy affordable Stationary.</p>
+                <a onclick="givealert()">Shop Now <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+                  <div>
+                <a onclick="givealert()">
+                    <img src="{{url_for('static',filename='images/electronics.jpg')}}" alt="" ></a>
+                <h3>ALL NEARBY ELECTRONICS</h3>
+                <p>Get range of Brands to choose from</p>
+                <a onclick="givealert()">Shop Now <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div>
+                <a onclick="givealert()">
+                    <img src="{{url_for('static',filename='images/cart_shop.jpg')}}" alt="" ></a>
+                <h3>AND MUCH MORE CATEGORIES OF SHOPS TO GET DEALS AS BUYER</h3>
+                <p>CHANCE TO EXPAND YOUR BUSINESS AS RETAILER REGISTER AS SELLER NOW!</p>
+                <a href="{{url_for('buyer_signup')}}">JOIN NOW <i class="fas fa-chevron-right"></i></a>
             </div>
                     </section>
                <section class="links">
@@ -139,9 +167,9 @@
                     <li>
                         <h3>Download App</h3>
                     </li>
-                    <li><img class="footer-image" src="{{url_for('static',filename='images/playstore.png')}}" alt=""> </li>
+                    <li><img class="footer-image" src="{{url_for('static',filename='images/playstore.png')}}" alt="img"> </li>
                     <li style="margin-top: 5px;">
-                        <img class="footer-image" src="{{url_for('static',filename='images/apptore.png')}}" " alt=" "> </li>
+                        <img class="footer-image" src="{{url_for('static',filename='images/apptore.png')}}" alt="img"> </li>
                 </ul>
             </div>
         </section>
@@ -152,10 +180,10 @@
            }
            </script>
         <script src="{{url_for( 'static',filename='js/script.js' )}} "></script>
-        <script src="https://kit.fontawesome.com/14b274511a.js " crossorigin="anonymous "></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+        <script src="https://kit.fontawesome.com/14b274511a.js " crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous"></script>
        </div>
 </body>
 </html>

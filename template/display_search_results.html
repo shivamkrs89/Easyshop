@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Welcome to {{sname}}</title>
+    <title>Search Results</title>
     <!-- Bootstrap core CSS -->
     <link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet">
     <!-- Fontawesome core CSS -->
@@ -39,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="{{url_for('buyer_dashboard')}}">
+                <a href="{{url_for('index')}}">
                     <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyshop" class="logo" height="50" width="50"></a>
             </div>
 
@@ -50,15 +50,7 @@
                 <ul class="nav navbar-nav navbar-right">
                      <li><a href="{{url_for('profile_update')}}">Update Profile</a> </li>
                     <li><a href="{{url_for('signout')}}">Logout</a></li>
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Orders<b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                         <li><a href="{{url_for('get_orders')}}"><strong>All orders</strong></a></li>
-                            <li><a href="#"><strong>Received Orders</strong></a></li>
-                         <li><a href="#"><strong>Pending Orders</strong>
-                            </a></li>
-                        </ul>
-                    </li>
+
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">24x7 Support <b class="caret"></b></a>
@@ -99,22 +91,20 @@
     </nav>
     <section class="home-cards">
 
-        <p><strong>Buy Products from {{sname}}</strong></p>
-         {% if length == 0 %}
-       <div align="center">
-                            <img src="{{url_for('static',filename='images/wish.jpg')}}" alt="">
-       </div>
-                                {% endif %}
-                    {%for i in range(0, length)%}
+         <p>Results for {{query}}</p>
+                    {%for i in range(0, len)%}
                             <div>
-                             <div class="row">
-                                <div class="col-md-4">
+                             <div align="right" class="row">
+                                <div align="right" class="col-md-4">
                                         <img src="{{url_for('static',filename=list[i][5])}}">
-                                    <h3>{{list[i][1]}}
+                                    <h3>{{list[i][1]}} from {{list[i][0]}}
                                      </h3>
-                                    <h4 class="mb-5">Price: &#x20B9;{{list[i][2]}}</h4>
-                            <a class="" href="{{url_for('get_to_cart',userid=list[i][3],prodid=list[i][4],prodname=list[i][1],price=list[i][2])}}">Add to cart</a>
+                                    <h4  class="mb-5">Price: &#x20B9;{{list[i][2]}}</h4>
+                                    {% if user_type is odd %}
+                            <a href="{{url_for('get_to_cart',userid=list[i][3],prodid=list[i][4],prodname=list[i][1],price=list[i][2])}}">Add to cart</a>
+                                {% endif %}
                                 </div>
+                                 <hr style="height:2px;margin-left:0;border-width:0;color:gray;background-color:blue">
                               </div>
                         {%endfor%}
                     </div>

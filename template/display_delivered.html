@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Welcome to {{sname}}</title>
+    <title>Orders delivered</title>
     <!-- Bootstrap core CSS -->
     <link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet">
     <!-- Fontawesome core CSS -->
@@ -39,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="{{url_for('buyer_dashboard')}}">
+                <a href="{{url_for('seller_dashboard')}}">
                     <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyshop" class="logo" height="50" width="50"></a>
             </div>
 
@@ -50,15 +50,7 @@
                 <ul class="nav navbar-nav navbar-right">
                      <li><a href="{{url_for('profile_update')}}">Update Profile</a> </li>
                     <li><a href="{{url_for('signout')}}">Logout</a></li>
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Orders<b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                         <li><a href="{{url_for('get_orders')}}"><strong>All orders</strong></a></li>
-                            <li><a href="#"><strong>Received Orders</strong></a></li>
-                         <li><a href="#"><strong>Pending Orders</strong>
-                            </a></li>
-                        </ul>
-                    </li>
+
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">24x7 Support <b class="caret"></b></a>
@@ -74,20 +66,16 @@
                             </a></li>
                         </ul>
                     </li>
-                    <li>
-                    <a href="{{url_for('show_cart')}}">
-                        <i class="fas fa-shopping-cart" alt="cart"></i>
-                    </a>
-                </li>
+
                 <li>
                     <a href="">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </a>
                 </li>
                 </ul>
-            <form action="{{url_for('search')}}" method="post" class="navbar-form navbar-right" role="search">
+                <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
-                        <input type="text" name="query" placeholder="Enter Keyword Here ..." class="form-control">
+                        <input type="text" placeholder="Enter Keyword Here ..." class="form-control">
                     </div>
                     &nbsp;
                     <button type="submit" class="btn btn-primary">Search</button>
@@ -97,29 +85,41 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <h1>CustomerID: {{list[0][12]}}</h1><br>
+    <h2>Address: {{list[0][13]}} </h2>
     <section class="home-cards">
+        <div>
+            <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> Order Time </th>
+                          <th> Order Sum</th>
+                            <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {%for i in range(0, len)%}
+                        <tr>
+                            <form action="{{url_for('orders_by_time')}}" method="post">
+                                <input type="hidden" maxlength="100" name="order_time"  value="{{list[i][7]}}">
+                                 <input type="hidden" maxlength="100" name="customer_id"  value={{list[i][12]}}>
+                          <td> {{list[i][7]}}></td>
+                                <td> {{list[i][9]}} </td>
+                                <td><input type="submit" name="see_order" value="See Order"></td>
+                                 </form>
 
-        <p><strong>Buy Products from {{sname}}</strong></p>
-         {% if length == 0 %}
-       <div align="center">
-                            <img src="{{url_for('static',filename='images/wish.jpg')}}" alt="">
-       </div>
-                                {% endif %}
-                    {%for i in range(0, length)%}
-                            <div>
-                             <div class="row">
-                                <div class="col-md-4">
-                                        <img src="{{url_for('static',filename=list[i][5])}}">
-                                    <h3>{{list[i][1]}}
-                                     </h3>
-                                    <h4 class="mb-5">Price: &#x20B9;{{list[i][2]}}</h4>
-                            <a class="" href="{{url_for('get_to_cart',userid=list[i][3],prodid=list[i][4],prodname=list[i][1],price=list[i][2])}}">Add to cart</a>
-                                </div>
-                              </div>
-                        {%endfor%}
-                    </div>
+
+
+                        </tr>
+                      {%endfor%}
+
+                      </tbody>
+                    </table>
+--------------------------------------------------------
+
+
             </div>
-     </div>
+
     </section>
 
         <div class="row">

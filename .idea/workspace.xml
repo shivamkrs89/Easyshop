@@ -2,11 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0447055-ea8b-4d0a-b710-32a692a3c18f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/template/shop_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/Add_Product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/buyer_pending_orders.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/display_delivered.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/display_orders.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/display_pending.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/display_search_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/my_orders.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/my_shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/my_shop_products.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/recieved_orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/dblogin.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/dblogin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/dboperations.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/dboperations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/shop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/seller.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/template/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/shop_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/shop_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/signup_shop1.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/signup_shop1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/update_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/update_profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +41,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1lNmcgOiYDQ8Y5kN7Rl0mKPcHr5" />
   <component name="ProjectViewState">
@@ -31,10 +50,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -242,30 +263,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="bekar" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2" timestamp="1607929755952">
+    <state x="430" y="220" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1608782416969">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1607929755952" />
+    <state x="430" y="220" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1608782416969" />
+    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2" timestamp="1608055842347">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="281" y="1" width="939" height="493" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1608055842347" />
     <state x="129" y="55" width="1092" height="610" key="DiffContextDialog" timestamp="1607883809329">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="55" width="1092" height="610" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607883809329" />
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom" timestamp="1607972098047">
+    <state width="1345" height="184" key="GridCell.Tab.0.bottom" timestamp="1609222768114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607972098047" />
-    <state width="1345" height="185" key="GridCell.Tab.0.center" timestamp="1607972098047">
+    <state width="1345" height="184" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609222768114" />
+    <state width="1345" height="184" key="GridCell.Tab.0.center" timestamp="1609222768114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607972098047" />
-    <state width="1345" height="185" key="GridCell.Tab.0.left" timestamp="1607972098047">
+    <state width="1345" height="184" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609222768114" />
+    <state width="1345" height="184" key="GridCell.Tab.0.left" timestamp="1609222768114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607972098047" />
-    <state width="1345" height="185" key="GridCell.Tab.0.right" timestamp="1607972098047">
+    <state width="1345" height="184" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609222768114" />
+    <state width="1345" height="184" key="GridCell.Tab.0.right" timestamp="1609222768114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607972098047" />
+    <state width="1345" height="184" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609222768114" />
     <state width="1367" height="231" key="GridCell.Tab.1.bottom" timestamp="1607884443612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -286,18 +311,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="395" y="80" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1607883472434" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1607926924334">
+    <state x="184" y="6" key="SettingsEditor" timestamp="1608803792712">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607926924334" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607929882612">
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608803792712" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1608055605809">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607929882612" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1607964229860">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608055605809" />
+    <state x="441" y="98" key="VcsDiffUtil.ChangesDialog" timestamp="1608055903490">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1607964229860" />
+    <state x="441" y="98" key="VcsDiffUtil.ChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608055903490" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1609216958641">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1609216958641" />
+    <state x="427" y="155" key="git4idea.merge.GitMergeDialog" timestamp="1608055937965">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="427" y="155" key="git4idea.merge.GitMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1608055937965" />
     <state x="396" y="155" key="git4idea.merge.GitPullDialog" timestamp="1607882021055">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

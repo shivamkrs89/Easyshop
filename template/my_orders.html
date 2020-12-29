@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
                 {% with messages = get_flashed_messages() %}
   {% if messages %}
     <script>
@@ -15,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Welcome to {{sname}}</title>
+    <title>My Orders</title>
     <!-- Bootstrap core CSS -->
     <link href="{{url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet">
     <!-- Fontawesome core CSS -->
@@ -26,7 +27,6 @@
     <link href="{{url_for('static',filename='ItemSlider/css/main-style.css')}}" rel="stylesheet" />
     <!-- custom CSS here -->
     <link href="{{url_for('static',filename='css/style2.css')}}" rel="stylesheet" />
-
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -50,15 +50,7 @@
                 <ul class="nav navbar-nav navbar-right">
                      <li><a href="{{url_for('profile_update')}}">Update Profile</a> </li>
                     <li><a href="{{url_for('signout')}}">Logout</a></li>
-                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Orders<b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                         <li><a href="{{url_for('get_orders')}}"><strong>All orders</strong></a></li>
-                            <li><a href="#"><strong>Received Orders</strong></a></li>
-                         <li><a href="#"><strong>Pending Orders</strong>
-                            </a></li>
-                        </ul>
-                    </li>
+
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">24x7 Support <b class="caret"></b></a>
@@ -85,9 +77,9 @@
                     </a>
                 </li>
                 </ul>
-            <form action="{{url_for('search')}}" method="post" class="navbar-form navbar-right" role="search">
+                <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
-                        <input type="text" name="query" placeholder="Enter Keyword Here ..." class="form-control">
+                        <input type="text" placeholder="Enter Keyword Here ..." class="form-control">
                     </div>
                     &nbsp;
                     <button type="submit" class="btn btn-primary">Search</button>
@@ -99,23 +91,27 @@
     </nav>
     <section class="home-cards">
 
-        <p><strong>Buy Products from {{sname}}</strong></p>
-         {% if length == 0 %}
-       <div align="center">
-                            <img src="{{url_for('static',filename='images/wish.jpg')}}" alt="">
-       </div>
-                                {% endif %}
+        <h1>Your Orders</h1><br>
                     {%for i in range(0, length)%}
                             <div>
                              <div class="row">
                                 <div class="col-md-4">
-                                        <img src="{{url_for('static',filename=list[i][5])}}">
-                                    <h3>{{list[i][1]}}
+
+
+                    <a href="{{url_for('display_shop',userid=list[i][5])}}">Visit Shop <i class="fas fa-chevron-right"></i></a></a>
+                                        <h3 class="font-weight-normal mb-3">{{list[i][0]}}
+                                     </h3><br>
+                                    <h4 class="mb-5">Price: &#x20B9;{{list[i][1]}}</h4><br>
+                                    <h3 class="font-weight-normal mb-3">Order type: {{list[i][2]}}
+                                     </h3><br>
+                                    <h3 class="font-weight-normal mb-3">Ordered on {{list[i][3]}}
+                                     </h3><br>
+                                    <h3 class="font-weight-normal mb-3" > Delivered ? {{list[i][4]}}
                                      </h3>
-                                    <h4 class="mb-5">Price: &#x20B9;{{list[i][2]}}</h4>
-                            <a class="" href="{{url_for('get_to_cart',userid=list[i][3],prodid=list[i][4],prodname=list[i][1],price=list[i][2])}}">Add to cart</a>
                                 </div>
+
                               </div>
+                                <hr style="height:2px;width:50%;text-align:left;margin-left:0;border-width:0;color:gray;background-color:blue">
                         {%endfor%}
                     </div>
             </div>

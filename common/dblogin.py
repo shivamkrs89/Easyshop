@@ -50,33 +50,45 @@ def buyer_registration(fname: str,lname: str, email: str, address: str, passwd: 
         return 0  # email exists
 
 def seller_login(emailid: str, passwd: str):
+    print("seller")
     mydb = connect()
     mycursor = mydb.cursor()
     mycursor.execute("SELECT pass from seller_info where email = \"" + emailid + "\"")
     fetched_list = mycursor.fetchall()
     if (len(fetched_list) == 0):
-        return -1  # email id not found
+        print("not found")
+        fetched_list=[('2')]
+        return fetched_list  # email id not found
 
     else:
         hassedPasswd = fetched_list[0][0]
+        print(hassedPasswd.encode("utf-8"),passwd.encode("utf-8"))
         if bcrypt.checkpw(passwd.encode("utf-8"), hassedPasswd.encode("utf-8")):
-            return 1  # login success
+            mycursor.execute("SELECT fname,lname,pass,phno,stype,userid,sname from seller_info where email = \"" + emailid + "\"")
+            fetched_list = mycursor.fetchall()
+
+            return fetched_list
         else:
-            return 0  # incorrect password
+            print("incorrect")
+            fetched_list = [('0')]
+            return fetched_list  # incorrect password
 def buyer_login(emailid: str, passwd: str):
     mydb = connect()
     mycursor = mydb.cursor()
     mycursor.execute("SELECT pass from buyer_info where email = \"" + emailid + "\"")
     fetched_list = mycursor.fetchall()
     if  len(fetched_list) == 0:
-        return [(-1)]  # email id not found
+        fetched_list = [('2')]
+        return fetched_list  # email id not found
 
     else:
         hassedPasswd = fetched_list[0][0]
-        if bcrypt.checkpw(passwd.encode("utf-8"), hassedPasswd.encode("utf-8")):
-            mycursor.execute("SELECT fname,lname,pass,phno from buyer_info where email = \"" + emailid + "\"")
+        print(hassedPasswd.encode("utf-8"), passwd.encode("utf-8"))
+        if bcrypt.checkpw( passwd.encode("utf-8"),hassedPasswd.encode("utf-8")):
+            mycursor.execute("SELECT fname,lname,pass,phno,address from buyer_info where email = \"" + emailid + "\"")
             fetched_list = mycursor.fetchall()
             print(fetched_list)
             return fetched_list  # login success
         else:
-            return [(0)]  # incorrect password
+            fetched_list = [('0')]
+            return fetched_list  # incorrect password

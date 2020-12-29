@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+                {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+      </script>
+     {% endif %}
+{% endwith %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -19,6 +29,8 @@
     <link href="{{url_for('static',filename='ItemSlider/css/main-style.css')}}" rel="stylesheet" />
     <!-- custom CSS here -->
     <link href="{{url_for('static',filename='css/style2.css')}}" rel="stylesheet" />
+         <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -42,6 +54,16 @@
                 <ul class="nav navbar-nav navbar-right">
                      <li><a href="{{url_for('profile_update')}}">Update Profile</a> </li>
                     <li><a href="{{url_for('signout')}}">Logout</a></li>
+                       <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Orders<b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                         <li><a href="{{url_for('get_orders')}}"><strong>All orders</strong></a></li>
+
+                         <li><a href="{{url_for('buyer_order_pending')}}"><strong>Pending Orders</strong>
+                            </a></li>
+                        </ul>
+                    </li>
+
 
 
                     <li class="dropdown">
@@ -59,8 +81,8 @@
                         </ul>
                     </li>
                     <li>
-                    <a href="#">
-                        <i class="fas fa-shopping-cart" alt="cart"></i>
+                    <a href="{{url_for('show_cart')}}">
+                        Cart
                     </a>
                 </li>
                 <li>
@@ -69,9 +91,9 @@
                     </a>
                 </li>
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
+                <form action="{{url_for('search')}}" method="post" class="navbar-form navbar-right" role="search">
                     <div class="form-group">
-                        <input type="text" placeholder="Enter Keyword Here ..." class="form-control">
+                        <input type="text" name="query" placeholder="Enter Keyword Here ..." class="form-control">
                     </div>
                     &nbsp;
                     <button type="submit" class="btn btn-primary">Search</button>
@@ -81,102 +103,33 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <div class="row">
-        <div class="col-md-5">
-    <section >
-            <div>
-                <a href="{{url_for('display_shop',userid=list1[0][0])}}">
-                  
-                <h3>{{list1[0][6]}}</h3>
-                <p>{{list1[0][7]}}</p>
-                    <a href="{{url_for('display_shop',userid=list1[0][0])}}">Shop Now <i class="fas fa-chevron-right"></i></a></a>
-            </div>
-                    </section></div>
-            <div class="col-md-5">
-    <section >
-            <div>
-                <a href="{{url_for('display_shop',userid=list1[1][0])}}">
-                    <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
-                <h3>{{list1[1][6]}}</h3>
-                <p>{{list1[1][7]}}</p>
-                <a href="{{url_for('display_shop',userid=list1[1][0])}}">Shop Now <i class="fas fa-chevron-right"></i></a>
-            </div>
-    </section></div></div>
-        <span class="col-md-5" >
-    <section >
-            <div>
-                <a href="{{url_for('display_shop',userid=list1[2][0])}}">
-                    <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
-                <h3>{{list1[2][6]}}</h3>
-                <p>{{list1[2][7]}}</p>
-                <a href="{{url_for('display_shop',userid=list1[2][0])}}">Shop Now <i class="fas fa-chevron-right"></i></a>
-            </div>
-                    </section></span>
-    <div class="row">
-        <div class="col-md-5">
-    <section  >
-            <div>
-                <a href="{{url_for('display_shop',userid=list1[3][0])}}">
-                    <img src="{{url_for('static',filename='images/shop.jpg')}}" alt=""></a>
-                <h3>{{list1[3][6]}}</h3>
-                <p>{{list1[3][7]}}</p>
-                <a href="{{url_for('display_shop',userid=list1[3][0])}}">Shop Now <i class="fas fa-chevron-right"></i></a>
-            </div>
-    </section></div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <strong>Send a Quick Query </strong>
-                <hr>
-                <form>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" required="required" placeholder="Name">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" required="required" placeholder="Email address">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="form-group">
-                                <textarea name="message" id="message" required="required" class="form-control" rows="3" placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Submit Request</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
 
-            <div class="col-md-4">
-                <strong>Our Location</strong>
-                <hr>
-                <p>
-                     234, CUSAT STREET,<br />
-                                    KOCHI, INDIA<br />
-                    Call: +91-7667659672<br>
-                    Email: info@easyshop.com<br>
-                </p>
 
-                2020 | All Right Reserved
-            </div>
-            <div class="col-md-4 social-box">
-                <strong>We are Social </strong>
-                <hr>
-                <a href="#"><i class="fa fa-facebook-square fa-3x "></i></a>
-                <a href="#"><i class="fa fa-twitter-square fa-3x "></i></a>
-                <a href="#"><i class="fa fa-google-plus-square fa-3x c"></i></a>
-                <a href="#"><i class="fa fa-linkedin-square fa-3x "></i></a>
-                <a href="#"><i class="fa fa-pinterest-square fa-3x "></i></a>
+   <section class="home-cards">
+      {% if length == 0 %}
+       <div align="center">
+                            <img src="{{url_for('static',filename='images/wish.jpg')}}" alt="">
+       </div>
+                                {% endif %}
 
+                    {%for i in range(0, length)%}
+                             <div class="row">
+                                <div class="col-md-50" align="center">
+                <a href="{{url_for('display_shop',userid=list1[i][0])}}">
+                    <img src="{{url_for('static',filename='images/shop1.jpg')}}" alt=""></a>
+                <h3>{{list1[i][6]}}</h3>
+                <p>{{list1[i][7]}}</p>
+                <a href="{{url_for('display_shop',userid=list1[i][0])}}">Shop Now <i class="fas fa-chevron-right"></i></a>
             </div>
-        </div>
+                              </div>
+                        {%endfor%}
+                            </section>
+
+
+
+
+
+
         <hr>
     </div>
     <!-- /.col -->
